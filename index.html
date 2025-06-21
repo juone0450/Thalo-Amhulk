@@ -45,6 +45,7 @@
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Inicio</a>
                 <a href="#sesiones" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Sesiones</a>
+                <a href="#reserva" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Reserva</a>
                 <a href="#reglas" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Reglas</a>
                 <a href="#medios-pago" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Medios de Pago</a>
                 <a href="#contacto" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Contacto</a>
@@ -60,6 +61,7 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#home" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Inicio</a>
             <a href="#sesiones" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Sesiones</a>
+            <a href="#reserva" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Reserva</a>
             <a href="#reglas" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Reglas</a>
             <a href="#medios-pago" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Medios de Pago</a>
             <a href="#contacto" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Contacto</a>
@@ -131,7 +133,20 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <!-- Section: Reserva -->
+        <section id="reserva" class="py-20 md:py-32 text-center bg-gray-50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800">Reserva tu Sesión</h2>
+                <p class="text-lg text-gray-600 mt-6 leading-relaxed">
+                    Las instrucciones de la reunión estarán en tu WhatsApp. También en el evento creado en tu calendario, en la sección de "ubicación", tendrás el link para conectarte a la llamada cuando llegue el momento. Adicionalmente, se te enviará por mensaje.
+                </p>
+                 <p class="mt-4 font-semibold text-gray-700">¡Recordá descargar <strong class="text-blue-600">Google Meet</strong> en tu computador o la aplicación en tu celular antes de la llamada!</p>
+                <a href="https://calendly.com/gonzalomiguez1/90min" target="_blank" class="mt-10 inline-block bg-green-600 text-white font-bold text-lg py-4 px-8 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105">
+                    <i class="far fa-calendar-alt mr-2"></i> Ir a Calendly para Reservar
+                </a>
             </div>
         </section>
 
@@ -253,9 +268,9 @@
                                 <li>No requiere envío / Sin dirección.</li>
                             </ul>
                             <p class="mt-2 text-xs text-gray-500 italic">(Las opciones pueden variar según el país)</p>
-                            <a href="https://drive.google.com/file/d/1QO84eq1d98oa9GHMhfO8Z34oZIcLRI2c/view" target="_blank" class="block mt-4 text-blue-600 hover:underline font-semibold">
+                             <button id="open-paypal-modal-btn" class="w-full mt-4 text-blue-600 hover:underline font-semibold text-left">
                                 <i class="fas fa-video mr-2"></i>Ver tutorial de pago
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -308,7 +323,7 @@
     </footer>
 
     <!-- Bank Info Modal -->
-    <div id="bank-info-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50 transition-opacity duration-300">
+    <div id="bank-info-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50 transition-opacity duration-300 opacity-0">
         <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 md:p-8 relative transform transition-transform duration-300 scale-95">
             <button id="close-modal-btn" class="absolute top-3 right-4 text-gray-400 hover:text-gray-800 text-3xl font-light">&times;</button>
             <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Transferencia Bancaria</h3>
@@ -338,6 +353,16 @@
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PayPal Tutorial Modal -->
+    <div id="paypal-tutorial-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center p-4 z-50 transition-opacity duration-300 opacity-0">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-4 relative transform transition-transform duration-300 scale-95">
+            <button id="close-paypal-modal-btn" class="absolute -top-3 -right-3 text-white bg-gray-800 rounded-full h-8 w-8 flex items-center justify-center hover:bg-red-600 transition-colors z-10 text-xl">&times;</button>
+            <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg">
+                <video id="paypal-video" controls class="w-full h-full rounded-lg" src="https://raw.githubusercontent.com/juone0450/Thalo-Amhulk/main/tutorial%20de%20paypal.mp4" type="video/mp4"></video>
             </div>
         </div>
     </div>
@@ -400,7 +425,7 @@
             }
         });
 
-        // --- Modal Logic ---
+        // --- Bank Info Modal Logic ---
         const openModalBtn = document.getElementById('open-modal-btn');
         const closeModalBtn = document.getElementById('close-modal-btn');
         const modal = document.getElementById('bank-info-modal');
@@ -409,7 +434,7 @@
         const openModal = () => {
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            setTimeout(() => { // For transition effect
+            setTimeout(() => {
                 modal.classList.remove('opacity-0');
                 modalContent.classList.remove('scale-95');
             }, 10);
@@ -418,7 +443,7 @@
         const closeModal = () => {
             modal.classList.add('opacity-0');
             modalContent.classList.add('scale-95');
-            setTimeout(() => { // For transition effect
+            setTimeout(() => {
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
             }, 300);
@@ -426,46 +451,70 @@
 
         openModalBtn.addEventListener('click', openModal);
         closeModalBtn.addEventListener('click', closeModal);
-
-        // Close modal on outside click
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
+            if (e.target === modal) closeModal();
         });
         
+        // --- PayPal Tutorial Modal Logic ---
+        const openPaypalModalBtn = document.getElementById('open-paypal-modal-btn');
+        const closePaypalModalBtn = document.getElementById('close-paypal-modal-btn');
+        const paypalModal = document.getElementById('paypal-tutorial-modal');
+        const paypalModalContent = paypalModal.querySelector('div');
+        const paypalVideo = document.getElementById('paypal-video');
+
+        const openPaypalModal = () => {
+            paypalModal.classList.remove('hidden');
+            paypalModal.classList.add('flex');
+            setTimeout(() => {
+                paypalModal.classList.remove('opacity-0');
+                paypalModalContent.classList.remove('scale-95');
+            }, 10);
+        };
+
+        const closePaypalModal = () => {
+            paypalModal.classList.add('opacity-0');
+            paypalModalContent.classList.add('scale-95');
+            if (!paypalVideo.paused) {
+                paypalVideo.pause();
+            }
+            setTimeout(() => {
+                paypalModal.classList.add('hidden');
+                paypalModal.classList.remove('flex');
+            }, 300);
+        };
+
+        openPaypalModalBtn.addEventListener('click', openPaypalModal);
+        closePaypalModalBtn.addEventListener('click', closePaypalModal);
+        paypalModal.addEventListener('click', (e) => {
+            if (e.target === paypalModal) closePaypalModal();
+        });
+
         // --- Copy to Clipboard Logic ---
         const copyBtns = document.querySelectorAll('.copy-btn');
-
         copyBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const targetId = btn.dataset.copyTarget;
                 const textToCopy = document.getElementById(targetId).innerText;
-
-                // Using document.execCommand as a fallback for iFrame compatibility
                 const textArea = document.createElement('textarea');
                 textArea.value = textToCopy;
-                textArea.style.position = 'fixed'; // Avoid scrolling to bottom
+                textArea.style.position = 'fixed';
                 document.body.appendChild(textArea);
                 textArea.focus();
                 textArea.select();
-                
                 try {
                     document.execCommand('copy');
                     const originalHtml = btn.innerHTML;
                     btn.innerHTML = '¡Copiado!';
-                    btn.classList.add('bg-green-500');
-                    btn.classList.remove('bg-blue-500');
-                    
+                    btn.classList.add('bg-green-500', 'hover:bg-green-600');
+                    btn.classList.remove('bg-blue-500', 'hover:bg-blue-600');
                     setTimeout(() => {
                         btn.innerHTML = originalHtml;
-                        btn.classList.remove('bg-green-500');
-                        btn.classList.add('bg-blue-500');
+                        btn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                        btn.classList.add('bg-blue-500', 'hover:bg-blue-600');
                     }, 2000);
                 } catch (err) {
                     console.error('No se pudo copiar el texto', err);
                 }
-
                 document.body.removeChild(textArea);
             });
         });
