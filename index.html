@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalo Amhulk - Terapeuta Holístico</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFDFB;
+            color: #383838;
+        }
+        /* Style for the active navigation link */
+        .nav-link-active {
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: #A3B18A;
+            text-decoration-thickness: 2px;
+        }
+        /* Custom gradient for card backgrounds */
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header id="header" class="bg-FDFDFB/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Top-left Title -->
+            <div class="text-lg font-semibold text-gray-700">
+                <a href="#home">Terapeuta Holístico</a>
+            </div>
+            <!-- Navigation Buttons -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Inicio</a>
+                <a href="#sesiones" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Sesiones</a>
+                <a href="#reglas" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Reglas</a>
+                <a href="#medios-pago" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Medios de Pago</a>
+                <a href="#contacto" class="nav-link text-gray-600 hover:text-gray-900 transition-colors duration-300">Contacto</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Inicio</a>
+            <a href="#sesiones" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Sesiones</a>
+            <a href="#reglas" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Reglas</a>
+            <a href="#medios-pago" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Medios de Pago</a>
+            <a href="#contacto" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-gray-100 mobile-nav-link">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8 md:py-16">
+
+        <!-- Section: Inicio -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-16 md:pt-0">
+            <div class="w-full max-w-4xl text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Profile Picture -->
+                    <div class="flex-shrink-0">
+                        <img src="https://lh4.googleusercontent.com/johL-1omtIv5UAXEEwya4GQ3LuiA2gyybcWmg3TrI_grsdpZ3J_toHdNX31-C3toT7HxhCRzrbpA66vqnisbm5HFdJareTlKjkrI0LuR8Jk90DYfJEeJzaulPd9Aa39C2F_oFHXRrZ4=w1280" 
+                             alt="Foto de perfil de Thalo Amhulk" 
+                             class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-xl border-4 border-white">
+                    </div>
+                    <!-- About Me Info -->
+                    <div class="flex-grow">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Thalo Amhulk</h1>
+                        <h2 class="text-xl md:text-2xl font-light text-gray-600 mt-4 mb-6">Sobre Mí</h2>
+                        <div class="space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
+                            <p>Terapeuta Holístico, Flores de Bach - Soul Coach.</p>
+                            <p>Conocimientos en Registros Akashicos.</p>
+                            <p>Vivo el arte del Hoponopono llevándolo a la práctica.</p>
+                            <p>Desarrollando mi propio método Hacking Mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Sesiones -->
+        <section id="sesiones" class="py-20 md:py-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">Sesiones</h2>
+                <p class="text-lg text-gray-600 mt-2">Descubre cómo podemos trabajar juntos en tu camino.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+                
+                <!-- Card: Terapia Floral Bach -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-8 flex flex-col h-full card-gradient">
+                    <img src="https://lh4.googleusercontent.com/08Bz-U98eaIwspUR1qqPEFVoxAXYvRHH7MmaRtASZdgaREngM3j-pmmVIqBEq6QTuSHlXwvt0Jv3z2daejNcCMWZ7SYABf_mAV-EhyLOyGH6DaRfozBWwJeMKULV12lu2kIKb3epMMTRZIH0gF7p110ckVDQkncv4hIZ-0KbqFD1eCVZcLxG4g=w1280" 
+                         alt="Imagen de Sesión de Terapia Floral Bach" 
+                         class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Sesión de Terapia Floral Bach</h3>
+                    <p class="text-gray-700 leading-relaxed flex-grow">
+                        Sesión para tratar los estados emocionales de desequilibrio, estabilizar y recuperar la salud física y emocional o acompañar un proceso de auto conocimiento.
+                        <br><br>
+                        Acompañamos el proceso con mantras de Biodescodificación emocional y las gotas indicadas según lo conversado en cada sesión para realizar el preparado personalizado.
+                    </p>
+                </div>
+
+                <!-- Card: Soul Coach -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-8 flex flex-col h-full card-gradient">
+                    <img src="https://lh6.googleusercontent.com/BJHfJxm4rR0NJh7b0n0T2N4NUQ3STRq0ZKiXGG3AZw_z93n-0QzWRQk5fmXYe6mdS3ESdp0DOMieIHeawPtJ8wPynavnGgTzxQJW5h-BvkNIZxL1j9NBQBpluAb7Og3aH8Um-uhTSvh43HBA4gOq8XxfTMi4x7sgIg2Xd7ZQom4e9UsTWaCPOQ=w1280" 
+                         alt="Imagen de Sesión de Soul Coach" 
+                         class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Sesión de Soul Coach</h3>
+                    <div class="text-gray-700 leading-relaxed flex-grow space-y-4">
+                        <p>Fecha de nacimiento, para establecer código de propósito de vida y analizar. Esto es un paquete de 4 sesiones, exclusivas de 1 hora y media cada una.</p>
+                        <ul class="list-disc list-inside space-y-2 pl-2">
+                            <li><span class="font-semibold">Sesión 1:</span> Aspectos personales y emocionales.</li>
+                            <li><span class="font-semibold">Sesión 2:</span> Aspectos sociales y materiales.</li>
+                            <li><span class="font-semibold">Sesión 3:</span> Misión emocional y vocacional.</li>
+                            <li><span class="font-semibold">Sesión 4:</span> Activaciones del ser y dones potenciales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Reglas de las Sesiones -->
+        <section id="reglas" class="py-20 md:py-32">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Reglas y Proceso de Reserva</h2>
+                <p class="text-lg text-gray-600 mt-2">Información importante para agendar tu sesión.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Cómo Reservar -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-gradient">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-green-400 pl-4">Cómo Reservar tu Sesión</h3>
+                    <div class="space-y-4">
+                        <p><strong class="text-gray-700">Medio:</strong> Las sesiones se realizan por videollamada de Google Meet o WhatsApp.</p>
+                        <p><strong class="text-gray-700">Duración:</strong> 1 hora y media.</p>
+                    </div>
+                    <div class="mt-6 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Reservar Turno</h4>
+                                <p class="text-gray-600">Verificar disponibilidad antes de abonar. El sistema permite reservar con hasta 30 días de anticipación.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Realizar el Pago y Confirmar</h4>
+                                <p class="text-gray-600">Enviar la captura de pantalla de la <strong class="text-green-700">reserva</strong> y del <strong class="text-green-700">pago</strong> vía WhatsApp.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8 p-4 rounded-lg bg-red-100 border border-red-200 text-red-800 text-center">
+                        <p class="font-bold"><i class="fas fa-exclamation-triangle mr-2"></i>¡MUY IMPORTANTE!</p>
+                        <p class="text-sm">Si no se realiza el envío de AMBAS capturas, la cita NO quedará reservada.</p>
+                         <a href="https://wa.me/5491122838474" target="_blank" class="mt-2 inline-block font-semibold underline hover:text-red-900">Enviar capturas por WhatsApp <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Inversión -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-gradient">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-400 pl-4">Inversión</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Terapia Bach -->
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="font-bold text-xl mb-3">Terapia Vibracional Bach</h4>
+                            <p class="text-gray-600 font-semibold">Depósitos Nacionales (AR):</p>
+                            <p class="text-3xl font-bold text-blue-600 my-2">$33.000</p>
+                            <p class="text-sm text-gray-500 mb-4">Vía Mercado Pago o Transferencia.</p>
+                            
+                            <p class="text-gray-600 font-semibold">Pagos Internacionales:</p>
+                            <p class="text-3xl font-bold text-blue-600 my-2">U$S 44</p>
+                             <p class="text-sm text-gray-500">Vía Zelle o Paypal.</p>
+                        </div>
+                         <!-- Soul Coach -->
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="font-bold text-xl mb-3">Soul Coach <span class="text-sm font-normal">(4 encuentros)</span></h4>
+                            <p class="text-gray-600 font-semibold">Depósitos Nacionales (AR):</p>
+                            <p class="text-3xl font-bold text-blue-600 my-2">$180.000</p>
+                            <p class="text-sm text-gray-500 mb-4">Vía Mercado Pago o Transferencia.</p>
+
+                            <p class="text-gray-600 font-semibold">Pagos Internacionales:</p>
+                            <p class="text-3xl font-bold text-blue-600 my-2">U$S 180</p>
+                            <p class="text-sm text-gray-500">Vía Zelle o Paypal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Política de Cancelación -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-gradient">
+                     <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-yellow-400 pl-4">Política de Cancelación</h3>
+                     <div class="text-center">
+                         <p class="text-gray-700">La reserva se puede cancelar con <strong class="text-yellow-700">48 hs. de antelación</strong>.</p>
+                         <p class="my-3">Comunícate haciendo click en el número de abajo:</p>
+                         <a href="https://wa.me/5491122838474" target="_blank" class="text-lg font-bold text-gray-800 hover:text-green-700 transition-colors">
+                            <i class="fab fa-whatsapp"></i> +54 9 11 2283 8474
+                         </a>
+                         <p class="mt-4 text-sm text-gray-600">Pasado este tiempo, la sesión se considera como realizada.</p>
+                         <p class="font-semibold text-yellow-800 mt-1">La sesión se reprograma únicamente previo nuevo depósito.</p>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Medios de Pago -->
+        <section id="medios-pago" class="py-20 md:py-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">Medios de Pago</h2>
+                <p class="text-lg text-gray-600 mt-2">Elige el medio que prefieras para realizar tu inversión.</p>
+            </div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Mercado Pago -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center h-full card-gradient">
+                    <img src="https://lh4.googleusercontent.com/K-fiNawd5tO3L28GxJix2n6VcDovmGVOAAe6yAgBtp9SYpXqSF1MPvyD3p5ykUdjrQFW2xnyi_tRnTNrDFThujJhVX6_C_dYd_BkzuaYx7CRlbIJ68J2o7W_HkQ81QoQKD0J-WHqH9A=w1280" alt="Logo de Mercado Pago" class="h-16 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Mercado Pago</h3>
+                    <p class="text-gray-700 leading-relaxed">Envío a mi número de celular:</p>
+                    <p class="text-lg font-semibold text-blue-600 mt-2">(54) 9 11 6368-9569</p>
+                    <div class="flex-grow"></div>
+                    <button id="open-modal-btn" class="mt-6 bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors w-full">
+                        Transferencia Bancaria
+                    </button>
+                </div>
+
+                <!-- PayPal -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center h-full card-gradient">
+                    <img src="https://lh3.googleusercontent.com/cVD3nd_xiQq2npmR-_nj--aXM1Mg5cfPQvB_o5FMw9nSYlOyxVs44lZtwvgOc2arYARZy3ZV6Rt2xlKQ7mmefF-kQl5hpGytQwUBs1RN8oKZ2Lnz8GoABg99JqCixTrVKTnqMQogq169kHAWDixhNOp9XYy6T-1QwfFlHBZYgVr8yH9L_PgmLA=w1280" alt="Logo de PayPal" class="h-16 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">PayPal</h3>
+                    <div class="flex-grow text-sm">
+                        <p class="text-gray-700">Enviar al email:</p>
+                        <p class="text-base font-semibold text-blue-600 my-2">paypal@albericomagic.com</p>
+                        <div class="text-left text-gray-600 mt-4 space-y-2 border-t pt-4">
+                            <p><strong class="text-gray-800">En Nota escribir:</strong> <span class="font-semibold text-red-600">TALO</span></p>
+                            <p><strong class="text-gray-800">Opción SIN dirección de envío:</strong></p>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>No aplica / No se necesita dirección.</li>
+                                <li>No requiere envío / Sin dirección.</li>
+                            </ul>
+                            <p class="mt-2 text-xs text-gray-500 italic">(Las opciones pueden variar según el país)</p>
+                            <a href="https://drive.google.com/file/d/1QO84eq1d98oa9GHMhfO8Z34oZIcLRI2c/view" target="_blank" class="block mt-4 text-blue-600 hover:underline font-semibold">
+                                <i class="fas fa-video mr-2"></i>Ver tutorial de pago
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zelle -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center h-full card-gradient">
+                     <img src="https://lh3.googleusercontent.com/O5Hdr21CiC5BmJBPbp8NFn89qGjkgWch7IZw5SUWa4RFGVtAxuwt-SME2cf-W985VdIE0hibmjaumg7-uuP3tleRBsIaaYPWRT4VQIqMY-oXgaJ8nln2T-8j08i2jOTh6hJP-PW-CbU=w1280" alt="Logo de Zelle" class="h-16 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Zelle</h3>
+                    <div class="flex-grow text-sm">
+                        <p class="text-gray-700">Sigue estos pasos:</p>
+                         <div class="text-left text-gray-600 mt-4 space-y-2 border-t pt-4">
+                            <ul class="space-y-2">
+                                <li>1. Inicia sesión y ve a "Enviar dinero con Zelle".</li>
+                                <li>2. Añade contacto: <strong class="text-blue-600">albericomagic@gmail.com</strong> a nombre de <strong>Patricio Alberico</strong>.</li>
+                                <li>3. Completa el importe y en el mensaje opcional escribe: <strong class="text-red-600">TALO</strong>.</li>
+                                <li>4. Confirma la transferencia.</li>
+                            </ul>
+                             <p class="mt-4 text-xs text-gray-500 italic">(La acreditación puede demorar hasta 24 hs. hábiles)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section: Contacto -->
+        <section id="contacto" class="py-20 md:py-32 text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Contacto General</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Para consultas generales que no sean sobre reservas, puedes contactarme a través de estos medios.</p>
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="https://wa.me/5491163689569" target="_blank" class="text-gray-500 hover:text-green-700 transition-colors duration-300">
+                    <i class="fab fa-whatsapp fa-3x"></i>
+                </a>
+                <a href="https://www.instagram.com/thaloamhulk/" target="_blank" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="mailto:thaloamhulk@gmail.com" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                    <i class="far fa-envelope fa-3x"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-600">
+            <p>&copy; <span id="year"></span> Thalo Amhulk. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bank Info Modal -->
+    <div id="bank-info-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 md:p-8 relative transform transition-transform duration-300 scale-95">
+            <button id="close-modal-btn" class="absolute top-3 right-4 text-gray-400 hover:text-gray-800 text-3xl font-light">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Transferencia Bancaria</h3>
+            <div class="space-y-4 text-gray-700">
+                <p><strong>Titular:</strong> Yael Celina Duarte</p>
+                <p><strong>CUIT:</strong> 27-26365262-8</p>
+                <p><strong>Banco:</strong> Banco Galicia</p>
+                <p><strong>Tipo:</strong> Caja de Ahorro</p>
+                <p><strong>Cuenta Nro:</strong> 4023759-0 057-3</p>
+                
+                <div class="border-t pt-4 mt-4">
+                    <p class="font-semibold mb-2">Alias de CBU:</p>
+                    <div class="flex items-center justify-between bg-gray-100 p-3 rounded-lg">
+                        <span id="alias-text" class="font-mono text-blue-600 text-lg">TENIS.LLUVIA.DELTA</span>
+                        <button class="copy-btn bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 text-sm" data-copy-target="alias-text">
+                            <i class="far fa-copy mr-1"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="border-t pt-4 mt-4">
+                     <p class="font-semibold mb-2">CBU:</p>
+                    <div class="flex items-center justify-between bg-gray-100 p-3 rounded-lg">
+                        <span id="cbu-text" class="font-mono text-blue-600 text-sm break-all">0070057330004023759034</span>
+                        <button class="copy-btn bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 text-sm" data-copy-target="cbu-text">
+                            <i class="far fa-copy mr-1"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Active navigation link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const header = document.getElementById('header');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+            threshold: 0.3
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-link-active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('nav-link-active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+        
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // --- Modal Logic ---
+        const openModalBtn = document.getElementById('open-modal-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modal = document.getElementById('bank-info-modal');
+        const modalContent = modal.querySelector('div');
+
+        const openModal = () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => { // For transition effect
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+        };
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => { // For transition effect
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        };
+
+        openModalBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // --- Copy to Clipboard Logic ---
+        const copyBtns = document.querySelectorAll('.copy-btn');
+
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.dataset.copyTarget;
+                const textToCopy = document.getElementById(targetId).innerText;
+
+                // Using document.execCommand as a fallback for iFrame compatibility
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                textArea.style.position = 'fixed'; // Avoid scrolling to bottom
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    const originalHtml = btn.innerHTML;
+                    btn.innerHTML = '¡Copiado!';
+                    btn.classList.add('bg-green-500');
+                    btn.classList.remove('bg-blue-500');
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalHtml;
+                        btn.classList.remove('bg-green-500');
+                        btn.classList.add('bg-blue-500');
+                    }, 2000);
+                } catch (err) {
+                    console.error('No se pudo copiar el texto', err);
+                }
+
+                document.body.removeChild(textArea);
+            });
+        });
+
+    </script>
+</body>
+</html>
